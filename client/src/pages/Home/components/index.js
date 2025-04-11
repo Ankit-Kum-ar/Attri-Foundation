@@ -1,6 +1,5 @@
 export { default as Hero } from './Hero'
 export { default as AboutUs } from './AboutUs'
-export { default as OurSupporters } from './OurSupporters'
 export { default as WhatWeStandFor } from './WhatWeStandFor'
 export { default as DonationBreakdown } from './DonationBreakdown'
 export { default as CallToActionWithEvents } from './CallToActionWithEvents'

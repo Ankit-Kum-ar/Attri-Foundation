@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const OurSupporters = () => {
+const OurSupporters = ({ bgColor = "bg-base-100", px = "0" }) => {
   const [duration, setDuration] = useState(10); // Default duration
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const OurSupporters = () => {
   }, []);
 
   return (
-    <section className="bg-base-100 my-16 px-6 md:px-20 font-roboto">
+    <section className={`${bgColor} my-16 px-4 md:px-${px}  font-roboto`}>
       <div className="text-center mb-8 flex justify-start items-center gap-4">
         <h4 className="text-lg font-semibold text-[#1D2130] mb-2">
           OUR SUPPORTERS

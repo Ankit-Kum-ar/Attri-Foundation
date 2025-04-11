@@ -1,11 +1,12 @@
-import { AboutUs, CallToActionWithEvents, DonationBreakdown, Hero, OurSupporters, WhatWeStandFor } from "./components";
+import { OurSupporters } from "../../components";
+import { AboutUs, CallToActionWithEvents, DonationBreakdown, Hero, WhatWeStandFor } from "./components";
 
 const Home = () => {
     return (
       <>
         <Hero />
         <AboutUs />
-        <OurSupporters />
+        <OurSupporters px="20" />
         <WhatWeStandFor />
         <DonationBreakdown />
         <CallToActionWithEvents />
