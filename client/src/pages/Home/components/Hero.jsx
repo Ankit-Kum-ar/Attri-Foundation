@@ -3,7 +3,7 @@ const Hero = () => {
     <div
         className="relative h-screen bg-cover bg-center"
         style={{
-          backgroundImage: "url('/Home-bg.png')", // Replace with your image URL
+          backgroundImage: "url('/home-bg.png')", // Replace with your image URL
         }}
     >
         {/* Text Content */}

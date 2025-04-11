@@ -1,9 +1,14 @@
-import Hero from "./components/Hero";
+import { AboutUs, CallToActionWithEvents, DonationBreakdown, Hero, OurSupporters, WhatWeStandFor } from "./components";
 
 const Home = () => {
     return (
       <>
         <Hero />
+        <AboutUs />
+        <OurSupporters />
+        <WhatWeStandFor />
+        <DonationBreakdown />
+        <CallToActionWithEvents />
       </>
     );
   };
