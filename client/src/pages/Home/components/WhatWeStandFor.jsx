@@ -5,9 +5,20 @@ const WhatWeStandFor = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           {/* Left Content */}
           <div className="md:w-1/2">
-            <h3 className="text-sm font-semibold text-[#1D2130] uppercase mb-6">
-              What We Do
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="72"
+                    height="3"
+                    viewBox="0 0 72 3"
+                    fill="none"
+                >
+                    <path d="M0 1.50049H72" stroke="black" strokeWidth="2" />
+                </svg>
+                <h4 className="text-sm font-semibold uppercase text-neutral tracking-wider">
+                    What We Do
+                </h4>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1D2130] mb-4">
               What We Stand For
             </h2>

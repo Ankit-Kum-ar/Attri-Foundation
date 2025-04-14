@@ -4,9 +4,20 @@ const AboutUs = () => {
       <div className="flex flex-col md:flex-row items-center md:gap-36 md:justify-between">
         {/* Left Content */}
         <div className="md:w-1/2">
-          <h4 className="text-lg font-semibold text-[#1D2130] mb-6">
-            KNOW ABOUT US
-          </h4>
+          <div className="flex items-center gap-3 mb-4">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="72"
+                    height="3"
+                    viewBox="0 0 72 3"
+                    fill="none"
+                >
+                    <path d="M0 1.50049H72" stroke="black" strokeWidth="2" />
+                </svg>
+                <h4 className="text-sm font-semibold uppercase text-neutral tracking-wider">
+                    Know About Us
+                </h4>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[#1D2130] mb-6">
             Together, We Rise.
           </h2>

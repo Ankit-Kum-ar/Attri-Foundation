@@ -1,5 +1,5 @@
-import { OurSupporters } from "../../components";
-import { AboutUs, CallToActionWithEvents, DonationBreakdown, Hero, WhatWeStandFor } from "./components";
+import { CallToActionWithEvents, OurSupporters } from "../../components";
+import { AboutUs, DonationBreakdown, Hero, WhatWeStandFor } from "./components";
 
 const Home = () => {
     return (
