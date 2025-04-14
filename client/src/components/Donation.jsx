@@ -40,7 +40,7 @@ const DonationForm = () => {
         <form className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {/* Full Name */}
           <div>
-            <label className="block text-sm font-medium text-[#525560] mb-2">Full Name</label>
+            <label className="block text-sm font-medium text-[#525560] mb-2 text-left">Full Name</label>
             <input
               type="text"
               placeholder="Enter your full name"
@@ -50,7 +50,7 @@ const DonationForm = () => {
 
           {/* Email ID */}
           <div>
-            <label className="block text-sm font-medium text-[#525560] mb-2">Email ID</label>
+            <label className="block text-sm font-medium text-[#525560] text-left mb-2">Email ID</label>
             <input
               type="email"
               placeholder="Enter your email"
@@ -60,7 +60,7 @@ const DonationForm = () => {
 
           {/* Donation Type */}
           <div>
-            <label className="block text-sm font-medium text-[#525560] mb-2">Donation Type</label>
+            <label className="block text-sm font-medium text-[#525560] mb-2 text-left">Donation Type</label>
             <select className="w-full border-b border-gray-400 focus:outline-none focus:border-[#F2C94C] text-lg py-2">
               <option value="">Select Donation Type</option>
               <option value="one-time">One-Time</option>
