@@ -1,4 +1,4 @@
-import { CallToActionWithEvents, OurSupporters } from "../../components";
+import { CallToActionWithEvents, DonationForm, OurSupporters } from "../../components";
 import { AboutUs, DonationBreakdown, Hero, WhatWeStandFor } from "./components";
 
 const Home = () => {
