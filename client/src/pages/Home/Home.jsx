@@ -5,6 +5,7 @@ const Home = () => {
     return (
       <>
         <Hero />
+        <DonationForm />
         <AboutUs />
         <OurSupporters px="20" />
         <WhatWeStandFor />
