@@ -1,15 +1,20 @@
 const express = require('express');
-
 const { PORT } = require('./config/env');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const paymentRouter = require('./routes/payment.route');
 const connectDB = require('./config/db');
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.json());
+
+app.use(cors({
+    origin: 'http://localhost:5173', // Replace with your frontend URL
+    credentials: true,
+}));
 
 // Sample route
 app.get('/', (req, res) => {

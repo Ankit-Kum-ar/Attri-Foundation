@@ -1,5 +1,7 @@
+const { RAZORPAY_KEY_SECRET } = require("../config/env");
 const razporyInstance = require("../config/razorpay");
 const Donation = require("../models/donation.model");
+const crypto = require("crypto");
 
 const createOrder = async (req, res) => {
     try {
@@ -49,15 +51,23 @@ const createOrder = async (req, res) => {
 
 const verifyPayment = async (req, res) => {
     try {
-      const { razorpayOrderId, razorpayPaymentId } = req.body;
+      const { razorpayOrderId, razorpayPaymentId, razorpaySignature } = req.body;
   
-      // Find the donation record by Razorpay Order ID
+      const body = razorpayOrderId + "|" + razorpayPaymentId;
+      const expectedSignature = crypto
+        .createHmac("sha256", RAZORPAY_KEY_SECRET) // Replace with your Razorpay secret key
+        .update(body.toString())
+        .digest("hex");
+  
+      if (expectedSignature !== razorpaySignature) {
+        return res.status(400).json({ error: "Invalid signature" });
+      }
+  
       const donation = await Donation.findOne({ razorpayOrderId });
       if (!donation) {
         return res.status(404).json({ error: "Donation not found" });
       }
   
-      // Update the payment status and Razorpay Payment ID
       donation.paymentStatus = "Completed";
       donation.razorpayPaymentId = razorpayPaymentId;
       await donation.save();
@@ -67,7 +77,7 @@ const verifyPayment = async (req, res) => {
       console.error("Error verifying payment:", error);
       res.status(500).json({ error: error.message || "Internal Server Error" });
     }
-  };
+};
 
 
 module.exports = {
