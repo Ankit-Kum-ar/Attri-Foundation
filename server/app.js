@@ -11,9 +11,24 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.json());
 
+// Allowed origins
+const allowedOrigins = [
+    'http://localhost:5173', // Localhost for development
+    'https://ngo-attri.onrender.com', // Deployed frontend URL
+];
+
+// CORS configuration
 app.use(cors({
-    origin: 'http://localhost:5173', // Replace with your frontend URL
-    credentials: true,
+    origin: (origin, callback) => {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true, // Allow cookies and credentials
 }));
 
 // Sample route

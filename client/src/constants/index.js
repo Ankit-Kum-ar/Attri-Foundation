@@ -146,3 +146,5 @@ export const causes = [
       "We support initiatives that empower women through education and skill development.",
   },
 ];
+
+export const API_URL = "https://ngo-5w6j.onrender.com"; // Replace with your API URL
