@@ -28,7 +28,7 @@ const Hero = () => {
           <p className="text-base text-neutral-700">
             Have any question in mind or want to enquire? Please feel free to contact us through the form or the following details.
           </p>
-        </div>
+        </div></div>
 
         {/* Right Column */}
         <div className="flex-1 space-y-8 text-neutral-900">
@@ -68,7 +68,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-      </div>
+        </div>
     </section>
   );
 };
